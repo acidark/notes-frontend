@@ -20,7 +20,7 @@ const App = () => {
   const [notes,setNotes] = useState([])
   const [newNote,setNewNote] = useState('new note..')
   const [showAll,setShowAll] = useState(true)
-  const [errorMessage,setErrorMessage] = useState('some error happened..')
+  const [errorMessage,setErrorMessage] = useState('pollo')
   const handleNoteChange=(event) => {
     console.log(event.target.value)
     setNewNote(event.target.value)
@@ -54,7 +54,9 @@ const App = () => {
     .catch(error => {
       setErrorMessage(`the note '${note.content}' was already eliminated`)
       // alert(`the note '${note.content}' was already eliminated`)
-      setTimeout(()=>{setErrorMessage(null)},5000)
+      setTimeout(()=>{
+        setErrorMessage(null)
+      },5000)
       setNotes(notes.filter(n => n.id != id))
     })
   }
