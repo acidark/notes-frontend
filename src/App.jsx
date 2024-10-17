@@ -44,9 +44,12 @@ const App = () => {
     const note = notes.find(n=>n.id===id)
     // console.log(note)
     const changedNote = {...note,important:!note.important}
+    // console.log(changedNote)
     noteService
+
     .update(id,changedNote)
     .then(returnedNote => {
+      // console.log(returnedNote)
       setNotes(notes.map(note=>note.id != id
         ? note
         : returnedNote))
