@@ -20,7 +20,7 @@ const App = () => {
   const [notes,setNotes] = useState([])
   const [newNote,setNewNote] = useState('new note..')
   const [showAll,setShowAll] = useState(true)
-  const [errorMessage,setErrorMessage] = useState('pollo')
+  const [errorMessage,setErrorMessage] = useState('pollito')
   const handleNoteChange=(event) => {
     console.log(event.target.value)
     setNewNote(event.target.value)
