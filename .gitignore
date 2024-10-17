@@ -23,5 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 *.env
-.env
-vite-config.js
+.env*
+dist/
+vite-config.js*
